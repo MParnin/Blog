@@ -1,5 +1,5 @@
 ---
-title: "Dactyl Manuform Build: Ergonomic Mechanical Keyboard"
+title: "Dactyl Manuform Build"
 date: 2023-02-26T11:44:16-05:00
 weight: 30
 ---
