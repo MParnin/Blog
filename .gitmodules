@@ -1,0 +1,4 @@
+[submodule "MParnin.github.io/public"]
+	path = MParnin.github.io/public
+	url = git@github.com:MParnin/MParnin.github.io.git
+	branch = main
