@@ -1,9 +1,9 @@
 ---
 title: "Dactyl Manuform Build"
 date: 2023-02-26T11:44:16-05:00
-weight: 30
+#weight: 30
 ---
-This will contain info about my Dactyl Manuform build.
+This is currently a work-in-progress and will contain info about my Dactyl Manuform build.
 
 Swiches: Kailh box jade
 

@@ -1,6 +1,6 @@
 baseURL: "https://MParnin.github.io/"
 languageCode: en-us
-title: 0xMP
+title: MP
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -48,10 +48,10 @@ menu:
       name: Search
       url: /search
       weight: 80
-    - identifier: Archives
-      name: Archives
-      url: archives
-      weight: 90
+    #- identifier: Archives
+      #name: Archives
+      #url: archives
+      #weight: 90
     #- identifier: Gitbook
       #name: Gitbook
       #url: https://example.org
@@ -62,7 +62,7 @@ params:
   title: ExampleSite
   description: "ExampleSite description"
   keywords: [Blog, Portfolio, PaperMod]
-  author: 0xMP
+  author: MP
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
@@ -95,7 +95,7 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "0xMP"
+    text: "MP"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -146,11 +146,6 @@ params:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
-
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
 
   # for search
   # https://fusejs.io/api/options.html
