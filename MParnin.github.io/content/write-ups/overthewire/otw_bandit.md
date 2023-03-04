@@ -1,6 +1,7 @@
 ---
 title: "Bandit"
 date: 2023-03-03
+weight: 10
 ---
 
 ## Background
