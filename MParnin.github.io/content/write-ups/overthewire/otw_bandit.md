@@ -59,6 +59,7 @@ sshpass -p `cat bandit0` ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
 
 `ls -la`
+
 `cat readme`
 
 Highlight and copy the returned password 
@@ -84,6 +85,7 @@ sshpass -p `cat bandit1` ssh bandit1@bandit.labs.overthewire.org -p 2220
 Note how bandit0 has changed to bandit1 for the next level.  Connect to the level.
 
 `ls -la`
+
 `cat ./-`
 
 Highlight and copy the returned password 
@@ -103,6 +105,7 @@ The password for the next level is stored in a file called spaces in this filena
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `cat 'spaces in this filename'`
 
 Highlight and copy the returned password 
@@ -122,8 +125,11 @@ The password for the next level is stored in a hidden file in the inhere directo
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `cd inhere`
+
 `ls -la`
+
 `cat '.hidden'`
 
 Highlight and copy the returned password 
@@ -145,16 +151,27 @@ The password for the next level is stored in the only human-readable file in the
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `cd inhere`
+
 `file ./*` #all files but list 'data' except -file07 lists 'ASCII text'
+
 `strings ./*` #prints strings of all files.  doesnt specify file per line though
+
 `cat ./-file00`
+
 `cat ./-file01`
+
 `cat ./-file02`
+
 `cat ./-file03`
+
 `cat ./-file04`
+
 `cat ./-file05`
+
 `cat ./-file06`
+
 `cat ./-file07`
 
 Highlight and copy the returned password 
@@ -178,9 +195,13 @@ The password for the next level is stored in a file somewhere under the inhere d
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `cd inhere`
+
 `ls -lR` #Recursively list files in all folders
+
 `find \! -executable -size 1033c`
+
 `cat ./maybehere07/.file2`
 
 Highlight and copy the returned password 
@@ -204,7 +225,9 @@ The password for the next level is stored somewhere on the server and has all of
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `find / -size 33c -user bandit7 -group bandit6`
+
 `find / -size 33c -user bandit7 -group bandit6 2>/dev/null` #redirect stderror output to trash
 
 Highlight and copy the returned password 
@@ -224,7 +247,9 @@ The password for the next level is stored in the file data.txt next to the word 
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `cat data.txt`
+
 `cat data.txt | grep millionth`
 
 Highlight and copy the returned password 
@@ -244,6 +269,7 @@ The password for the next level is stored in the file data.txt and is the only l
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cat data.txt`
+
 `cat data.txt | sort | uniq -c | grep -v "10"`
 
 Highlight and copy the returned password 
@@ -265,6 +291,7 @@ The password for the next level is stored in the file data.txt in one of the few
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cat data.txt`
+
 `cat data.txt | strings | grep "===="`
 
 Highlight and copy the returned password 
@@ -302,6 +329,7 @@ The password for the next level is stored in the file data.txt, where all lowerc
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cat data.txt`
+
 `echo "echo "Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi" | rot13"`
 
 Highlight and copy the returned password 
@@ -321,28 +349,51 @@ The password for the next level is stored in the file data.txt, which is a hexdu
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `mkdir /tmp/t0nberry`
+
 `cp data.txt /tmp/t0nberry`
+
 `cd /tmp/t0nberry`
+
 `xxd -reverse data.txt > reverse`
+
 `file reverse` gzip compressed data
+
 `mv reverse reverse.gz`
+
 `gunzip reverse.gz`
+
 `file reverse` bzip2 compressed data
+
 `bunzip2 reverse`
+
 `file reverse.out` gzip compressed data
+
 `mv reverse.out reverse.gz`
+
 `gunzip reverse.gz`
+
 `file reverse` tar archive
+
 `tar xf reverse`
+
 `file *` data5.bin is tar
+
 `tar xvf data5.bin`
+
 `file *`
+
 `bunzip2 data6.bin`
+
 `file *`
+
 `tar xvf data6.bin.out`
+
 `file *`
+
 `mv data8.bin data8.gz`
+
 `gunzip data8.gz`
+
 `cat data8`
 
 Highlight and copy the returned password 
@@ -362,6 +413,7 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `ssh -i sshkey.private bandit14@localhost -p 2220`
 
 ---
@@ -397,7 +449,9 @@ Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof an
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cat /etc/bandit_pass/bandit15`
+
 `cat /etc/bandit_pass/bandit15 | openssl s_client -connect localhost:30001`
+
 `cat /etc/bandit_pass/bandit15 | openssl s_client -connect localhost:30001 -ign_eof`
 
 Highlight and copy the returned password 
@@ -432,9 +486,13 @@ PORT      STATE SERVICE
 ```
 
 `cat /etc/bandit_pass/bandit16`
+
 `cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31046`
+
 `cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31518 -ign_eof`
+
 `cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31691 -ign_eof`
+
 `cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -ign_eof`
 
 ```
@@ -456,7 +514,9 @@ There are 2 files in the homedirectory: passwords.old and passwords.new. The pas
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cat passwords.old`
+
 `cat passwords.new`
+
 `diff passwords.old passwords.new`
 
 Highlight and copy the returned password 
@@ -490,6 +550,7 @@ To gain access to the next level, you should use the setuid binary in the homedi
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `ls -la`
+
 `./bandit20-do cat /etc/bandit_pass/bandit20`
 
 Highlight and copy the returned password 
@@ -511,6 +572,7 @@ NOTE: Try connecting to your own network daemon to see if it works as you think
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `nc -lvp 8888`
+
 `./suconnect 8888` supply bandit20 pass in listener window after connecting to receive bandit21 pass
 
 ---
@@ -524,8 +586,11 @@ A program is running automatically at regular intervals from cron, the time-base
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cd /etc/cron.d`
+
 `cat cronjob_bandit22`
+
 `cat /usr/bin/cronjob_bandit22.sh`
+
 `cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv`
 
 Highlight and copy the returned password 
@@ -547,8 +612,11 @@ NOTE: Looking at shell scripts written by other people is a very useful skill. T
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cd /etc/cron.d`
+
 `cat cronjob_bandit23`
+
 `echo I am user bandit23 | md5sum | cut -d ' ' -f 1`
+
 `cat /tmp/8ca319486bfbbc3663ea0fbe81326349`
 
 Highlight and copy the returned password 
@@ -572,13 +640,21 @@ NOTE 2: Keep in mind that your shell script is removed once executed, so you may
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cd /etc/cron.d`
+
 `ls -la`
+
 `cat cronjob_bandit24`
+
 `cat /usr/bin/cronjob_bandit24.sh`
+
 `myname=bandit24`
+
 `cd /var/spool/bandit24/foo`
+
 `mkdir /tmp/t0nberry2`
+
 `chmod 777 /tmp/t0nberry2`
+
 `nano getpass.sh`
 
 ```
@@ -590,6 +666,7 @@ cat /etc/bandit_pass/bandit24 > /tmp/t0nberry2/bandit24
 ```
 
 `chmod +x getpass.sh`
+
 `cat /tmp/t0nberry2/bandit24`
 
 Highlight and copy the returned password 
@@ -611,8 +688,11 @@ A daemon is listening on port 30002 and will give you the password for bandit25 
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `cat /etc/bandit_pass/bandit24`
+
 `nc localhost 30002`
+
 `mkdir /tmp/t0nberry3`
+
 `cd /tmp/t0nberry3`
 
 ```
@@ -625,8 +705,11 @@ done
 ```
 
 `chmod +x index.sh`
+
 `./brute.sh`
+
 `cat combinations.txt | nc localhost 30002 >> result.txt`
+
 `sort result.txt | uniq -u`
 
 Highlight and copy the returned password 
@@ -646,8 +729,11 @@ Logging in to bandit26 from bandit25 should be fairly easy… The shell for user
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 shrink screen small
+
 `ssh -i bandit26.sshkey bandit26@localhost -p 2220`
+
 press v to enter vim
+
 `:r /etc/bandit_pass/bandit26`
 
 ---
@@ -661,10 +747,15 @@ Good job getting a shell! Now hurry and grab the password for bandit27!
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 shrink screen small
+
 `ssh -i bandit26.sshkey bandit26@localhost -p 2220`
+
 press v to enter vim
+
 `:set shell=/bin/bash`
+
 `:shell`
+
 `cat /etc/bandit_pass/bandit27`
 
 Highlight and copy the returned password 
@@ -686,10 +777,15 @@ Clone the repository and find the password for the next level.
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `mkdir /tmp/t0nberry4`
+
 `cd /tmp/t0nberry4`
+
 `git clone "ssh://bandit27-git@localhost:2220/home/bandit27-git/repo"`
+
 `ls`
+
 `cd repo`
+
 `cat README`
 
 Highlight and copy the returned password 
@@ -711,11 +807,17 @@ Clone the repository and find the password for the next level.
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `mkdir /tmp/t0nberry5`
+
 `cd /tmp/t0nberry5`
+
 `git clone "ssh://bandit28-git@localhost:2220/home/bandit28-git/repo"`
+
 `cd repo`
+
 `cat README.md`
+
 `git log`
+
 `git show bdf3099fb1fb05faa29e80ea79d9db1e29d6c9b9` #change history shows password
 
 Highlight and copy the returned password 
@@ -739,14 +841,23 @@ Clone the repository and find the password for the next level.
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `mkdir /tmp/t0nberry6`
+
 `cd /tmp/t0nberry6`
+
 `git clone "ssh://bandit29-git@localhost:2220/home/bandit29-git/repo"`
+
 `cd repo`
+
 `ls`
+
 `cat README.md`
+
 `git branch -a`
+
 `git checkout remotes/origin/dev`
+
 `git log`
+
 `git show 2b1395f00cfb986163082c50100be5be8f249f64` #log for dev commit
 
 Highlight and copy the returned password 
@@ -768,13 +879,21 @@ Clone the repository and find the password for the next level.
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `mkdir /tmp/t0nberry7`
+
 `cd /tmp/t0nberry7`
+
 `cd repo`
+
 `cat README.md`
+
 `ls -la`
+
 `cd .git`
+
 `cat packed-refs`
+
 `git show 831aac2e2341f009e40e46392a4f5dd318483019`
+
 `git show-ref` #will also show the secret branch containing the key
 
 Highlight and copy the returned password 
@@ -796,16 +915,27 @@ Clone the repository and find the password for the next level.
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `mkdir /tmp/t0nberry8`
+
 `cd /tmp/t0nberry8`
+
 `cd repo`
+
 `cat README.md`
+
 `nano key.txt` #May I come in? added
+
 `git add .`
+
 `git commit` #key.txt was ignored
+
 `git add key.txt` #notes .gitignore ignores .txt files.  use -f to override ignore.
+
 `git add key.txt -f`
+
 `git commit`
+
 `Added file` #to commit message
+
 `git push`
 
 Highlight and copy the returned password 
@@ -825,6 +955,7 @@ After all this git stuff its time for another escape. Good luck!
 Arrow up to get to retrieve your previously entered sshpass command and increment bandit by one.  Connect to the ssh server.
 
 `$0`
+
 `cat /etc/bandit_pass/bandit33`
 
 Highlight and copy the returned password 
