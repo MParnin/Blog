@@ -18,7 +18,7 @@ menu:
   main:
     - identifier: About
       name: About
-      url: /about/aboutme
+      url: /about/
       weight: 10
     - identifier: CTF Write-ups
       name: CTF Write-ups
