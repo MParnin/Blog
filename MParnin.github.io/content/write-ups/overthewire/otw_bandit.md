@@ -2,10 +2,11 @@
 title: "Bandit"
 date: 2023-03-03
 weight: 10
+hideSummary: true
 ---
 
 ## Background
-The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basic of using Linux.
+The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basics of the Linux command line.
 
 ## sshpass Command
 ```
