@@ -1,5 +1,5 @@
 ---
-title: "Blog Initial Configuration"
+title: "Blog Setup"
 description: "Brief walkthrough of the steps taken to create this blog in Linux"
 date: 2023-03-02
 #weight: 1
