@@ -7,9 +7,6 @@ showToc: false
 
 I'm a Mechanical Engineer that enjoys tinkering and learning new things.  The purpose of this blog is to share my experiences as well as things that I find interesting and/or helpful on my journey to learning programming, penetration testing, and malware analysis.    
 
-## Goal
-1. Become employable within the Cybersecurity field
-
 ## Achievements
 1. TryHackMe's Web Fundamentals, Complete Beginner, and Jr Penetration Tester learning paths
 2. Virtual Hacking Labs Basic Certificate of Completion
