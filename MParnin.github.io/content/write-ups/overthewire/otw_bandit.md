@@ -1,5 +1,5 @@
 ---
-title: "Bandit"
+title: "OTW: Bandit"
 date: 2023-03-03
 weight: 10
 hideSummary: true

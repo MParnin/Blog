@@ -1,5 +1,5 @@
 ---
-title: "Lame"
+title: "HTB: Lame"
 date: 2023-03-05
 # weight: 1
 author: MP
